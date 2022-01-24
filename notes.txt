@@ -1,0 +1,15 @@
+### Controller: 
+Is something that accepts http request and sends back a response to the client
+
+The logic asociated to manufacutring the response, is not housed insie the
+controller, it is housed somewhere else.
+
+The controller is only responsible for accepting HTTP request and sending back
+a response.
+
+A controller is going to house routes that are common. (ex. all /students)
+
+
+### Decorators:
+They identify what the thing that we are trying to create is.
+
