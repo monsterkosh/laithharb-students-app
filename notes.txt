@@ -13,3 +13,5 @@ A controller is going to house routes that are common. (ex. all /students)
 ### Decorators:
 They identify what the thing that we are trying to create is.
 
+### REQUEST OBJECTS
+Extract information for the request
