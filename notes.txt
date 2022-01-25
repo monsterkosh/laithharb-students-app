@@ -32,3 +32,9 @@ A way to validate and transform data
 transform: transform input data to the desired form
 validation: evaluate input data and if valid, simply pass it through unchanged,
 otherwise throw and exception when the data is incorrect
+
+### MODULES
+A way to really organize our components
+
+nest g module student 
+nest g module teacher
