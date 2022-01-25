@@ -38,3 +38,18 @@ A way to really organize our components
 
 nest g module student 
 nest g module teacher
+
+### MIDDLEWARE
+Middle man between the Request of a Client and the Controller
+Needed when we have a lot a repetive code. 
+(Ex. if we have 5 routes validating uuids, we could validate the uuid in the 
+middleware, if its not validated... dont even send it to the controller)
+Another use if we need to make sure if the client is authorized to make that 
+request, if he's logged in of if he had for example premium access.
+Also used for handling errors.
+And used also for sanitize our data, and inject data inside the request so
+the controller can actually used. (Ex. if we are trying to log in through
+a JWT, the middleware can parse that JWT, figure out the User is, and put 
+that used in the request, so the Controller doesnt need to parse that data)
+
+Its just a class that is injected into the module
