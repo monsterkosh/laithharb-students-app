@@ -15,3 +15,7 @@ They identify what the thing that we are trying to create is.
 
 ### REQUEST OBJECTS
 Extract information for the request
+
+### DTO
+Data transfer objects
+Classes that define the type of data we are transfering
