@@ -5,22 +5,27 @@ import {
   StudentResponseDTO,
   UpdateStudentDTO,
 } from './dto/students.dto';
+import { StudentService } from './student.service';
 
 @Controller('students')
 export class StudentController {
+  // NO ENTIENDO - 1
+  constructor(private readonly studentService: StudentService) {}
+
   @Get()
   getStudents(): FindStudentReponseDTO[] {
-    return 'All students';
+    // *1
+    return this.studentService.getStudents();
   }
 
   @Get('/:studentId')
   getStudentById(@Param('studentId') studentId: string): FindStudentReponseDTO {
-    return `Get student with id of ${studentId}`;
+    return this.studentService.getStudentById(studentId);
   }
 
   @Post()
   createStudent(@Body() body: CreateStudentDTO): StudentResponseDTO {
-    return `Create student with the following data ${JSON.stringify(body)}`;
+    return this.studentService.createStudent(body);
   }
 
   @Put('/:studentId')
@@ -28,8 +33,6 @@ export class StudentController {
     @Param('studentId') studentId: string,
     @Body() body: UpdateStudentDTO,
   ): StudentResponseDTO {
-    return `Update student with id of ${studentId} with data of ${JSON.stringify(
-      body,
-    )}`;
+    return this.studentService.updateStudent(body, studentId);
   }
 }

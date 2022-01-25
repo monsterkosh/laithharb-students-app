@@ -19,3 +19,10 @@ Extract information for the request
 ### DTO
 Data transfer objects
 Classes that define the type of data we are transfering
+
+### PROVIDERS  (Service)
+Contains all the logic that is going to send back the response
+They way to manufacture the response we are going to be sending
+
+nest g service student --no-spec
+nest g service teacher --no-spec
