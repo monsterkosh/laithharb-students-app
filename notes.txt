@@ -26,3 +26,9 @@ They way to manufacture the response we are going to be sending
 
 nest g service student --no-spec
 nest g service teacher --no-spec
+
+### PIPES
+A way to validate and transform data
+transform: transform input data to the desired form
+validation: evaluate input data and if valid, simply pass it through unchanged,
+otherwise throw and exception when the data is incorrect
